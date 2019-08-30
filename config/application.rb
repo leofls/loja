@@ -44,6 +44,9 @@ module Loja
       end      
     end
 
+    # Rack Attack conficuration
+    config.middleware.use Rack::Attack
+
     #Rspec configuration
     config.generators do |g|
       g.test_framework :rspec, :view_specs => false,
