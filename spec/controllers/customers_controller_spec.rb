@@ -42,10 +42,9 @@ RSpec.describe CustomersController, type: :controller do
   let(:valid_session) { {} }
 
   describe "GET #index" do
-    it "returns a success response" do
-      customer = Customer.create! valid_attributes
-      get :index, params: {}, session: valid_session
-      expect(response).to be_successful
+    it "returns a success response" do      
+      get :index
+      expect(response).to be_successful #response.success?
     end
   end
 
