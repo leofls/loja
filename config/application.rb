@@ -34,32 +34,18 @@ module Loja
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
-<<<<<<< HEAD
     # CORS configuration 
     config.middleware.insert_before 0, Rack::Cors do 
       allow do      
         origins '*'      
-=======
-    # rack-cors configuration
-    config.middleware.insert_before 0, Rack::Cors do
-      allow do
-        origins '*'     
->>>>>>> master
         resource '*',      
           headers: :any,      
           methods: %i(get post put patch delete options head)
       end      
-<<<<<<< HEAD
-     end
-
-     # rack-attack configuration 
-     config.middleware.use Rack::Attack
-=======
     end
 
     # Rack Attack conficuration
     config.middleware.use Rack::Attack
->>>>>>> master
 
     #Rspec configuration
     config.generators do |g|
